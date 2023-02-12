@@ -1,0 +1,165 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0%;
+  box-sizing: inherit;
+}
+:root {
+  --bgColor:  #c5c2c2;
+  --brown: black;
+}
+body {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  line-height: 1.7;
+  font-weight: 400;
+  background-color: var(--bgColor);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+}
+.bulb {
+  height: 10.5rem;
+  position: relative;
+  width: 10rem;
+  /* background-color: white; */
+  border-bottom: 1.5px solid black;
+  border-radius: 50%;
+  display: flex;
+}
+.bulb::after {
+  content: "";
+  position: absolute;
+  border-bottom: 5rem solid var(--bgColor);
+  border-right: 25px solid var(--bgColor);
+  border-left: 25px solid var(--bgColor);
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -5%;
+  border-radius: 0 0 50% 50%;
+}
+.bulb__handle {
+  height: 5rem;
+  width: 69%;
+  background-color: rgba(0, 0, 0, 0.883);
+  box-shadow: inset 10px 0px 5px var(--brown), inset -10px 0px 5px var(--brown);
+  top: -50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bulb__handle::after {
+  content: "";
+  width: 110%;
+  height: 2em;
+  position: absolute;
+  left: 50%;
+  top: 69%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.926);
+  box-shadow: inset 10px 0px 5px var(--brown), inset -10px 0px 5px var(--brown);
+  border-radius: 12px 12px 2px 2px;
+}
+.bulb__handle::before {
+  content: "";
+  width: 110%;
+  height: 4rem;
+  position: absolute;
+  left: 50%;
+  top: -60%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.91);
+  box-shadow: inset 5px 0px 5px var(--brown), inset -5px 0px 5px var(--brown);
+  border-radius: 10002px 10002px 442px 442px;
+}
+.bulb__handle--middle {
+  height: 0.7rem;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  width: 110%;
+  background-color: rgba(0, 0, 0, 0.493);
+  box-shadow: inset 10px 0px 5px var(--brown), inset -10px 0px 5px var(--brown);
+  border-radius: 12px;
+}
+.bulb__handle--middle:first-of-type {
+  top: 30%;
+}
+.bulb__filament {
+  box-shadow: inset 1px 0px 1px var(--brown), inset -1px 0px 1px var(--brown);
+  background-color: var(--bgColor);
+  height: 3rem;
+  width: 3em;
+  z-index: 778;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  top: -5%;
+}
+.bulb__filament::after {
+  content: "";
+  width: 140%;
+  height: 4em;
+  background-color: var(--bgColor);
+  border: 1px solid var(--brown);
+  position: relative;
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  border-top: 1px solid var(--bgColor);
+  border-bottom: 1px solid var(--bgColor);
+  transform: translate(-50%);
+  border-radius: 52px 52px 0 0;
+}
+.bulb__filament::before {
+  content: "";
+  width: 190%;
+  height: 2em;
+  position: relative;
+  position: absolute;
+  top: 118%;
+  left: 50%;
+  z-index: 9;
+  border-radius: 52px;
+  background-color: var(--brown);
+  clip-path: polygon(
+    50% 0%,
+    67% 55%,
+    91% 0,
+    81% 27%,
+    67% 66%,
+    50% 15%,
+    35% 66%,
+    9% 0,
+    35% 57%
+  );
+  transform: translate(-50%);
+}
+.light {
+  left: 50%;
+  width: 1.2em;
+  height: 4em;
+  position: absolute;
+  z-index: 4995;
+  border-radius: 0 0 1px 1px;
+  transform: translate(-50%);
+  background: linear-gradient(
+    to bottom,
+    var(--bgColor) 30%,
+    black
+  );
+  background-repeat: no-repeat;
+}
+.bright {
+  height: 25rem;
+  width: 25rem;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%);
+}

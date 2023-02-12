@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0%;
+}
+html,
+body {
+  box-sizing: border-box;
+  line-height: 1.7;
+  font-weight: 400;
+  font-size: 62.5%;
+  width: 100%;
+  min-height: 100vh;
+}
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 500px;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.container .container__image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 1s ease;
+}
+.container .container__image--current {
+  top: 0%;
+}
+.btn {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  z-index: 34;
+  cursor: pointer;
+}
